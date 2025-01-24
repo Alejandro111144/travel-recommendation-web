@@ -76,35 +76,43 @@
         .social-icons img {
             width: 40px;
         }
+
         /* Styles for recommendations */
+        #recommendations-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+            gap: 20px;
+            padding: 20px;
+        }
+
         .destination, .temple, .beach {
             background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
-            margin: 20px 0;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             color: white;
             text-align: left;
         }
+
         .destination h3, .temple h3, .beach h3 {
             font-size: 22px;
             color: #ff9900;
         }
+
+        /* Ensure images have consistent size */
         .destination img, .temple img, .beach img {
-    width: 10%;
-    height: 20%;
-    border-radius: 10px;
-    margin: 15px 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+            width: 100%; /* Make the image fill its container */
+            height: auto;
+            max-height: 200px; /* Set max height to ensure uniformity */
+            object-fit: cover; /* This ensures images are cropped to fill the space */
+            border-radius: 10px;
+            margin: 15px 0;
+        }
 
         .destination p, .temple p, .beach p {
             font-size: 16px;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="navbar">
@@ -136,4 +144,34 @@
 
     <script src="travel_recommendation.js"></script>
 </body>
+<footer class="bg-gray-800 text-gray-400 text-sm py-6">
+    <div class="container mx-auto px-6 text-center">
+        <!-- Sección de iconos sociales -->
+        <div class="flex justify-center space-x-8 mt-6">
+            <a href="https://www.instagram.com/javidev.site/" target="_blank" class="text-gray-400 hover:text-pink-500 text-3xl transition duration-300 ease-in-out">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@javidev" target="_blank" class="text-gray-400 hover:text-red-500 text-3xl transition duration-300 ease-in-out">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61568612923739" target="_blank" class="text-gray-400 hover:text-blue-600 text-3xl transition duration-300 ease-in-out">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://x.com/javidevsite" target="_blank" class="text-gray-400 hover:text-blue-400 text-3xl transition duration-300 ease-in-out">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.tiktok.com/@javidev.site" target="_blank" class="text-gray-400 hover:text-black text-3xl transition duration-300 ease-in-out">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+        
+        <!-- Texto de copyright -->
+        <p class="text-white text-sm mt-4">
+            Created and developed by: © 2025 Javier Alejandro Castillo - javidev.
+        </p>
+    </div>
+  </footer>
+
+
+
 </html>
