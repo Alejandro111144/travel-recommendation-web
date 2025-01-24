@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBloom - Explore the World</title>
+    <style>
+        body {
+            font-family: 'Pacifico', cursive;
+            margin: 0;
+            padding: 0;
+            background: url('img/background.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+        .navbar {
+            background-color: #003366;
+            overflow: hidden;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            background-color: #002244;
+            border-radius: 5px;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+        .search-container input {
+            padding: 8px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+        .search-container button {
+            padding: 8px 12px;
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        .search-container button:hover {
+            background-color: #cc7700;
+        }
+        .logo {
+            height: 50px;
+            border-radius: 40%;
+        }
+        .intro {
+            margin-top: 100px;
+            padding: 20px;
+            font-size: 24px;
+            background: rgba(0, 0, 0, 0.6);
+            display: inline-block;
+            border-radius: 10px;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .social-icons img {
+            width: 40px;
+        }
+        /* Styles for recommendations */
+        .destination, .temple, .beach {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: left;
+        }
+        .destination h3, .temple h3, .beach h3 {
+            font-size: 22px;
+            color: #ff9900;
+        }
+        .destination img, .temple img, .beach img {
+    width: 10%;
+    height: 20%;
+    border-radius: 10px;
+    margin: 15px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+        .destination p, .temple p, .beach p {
+            font-size: 16px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div>
+            <img src="img/logo.png" alt="TravelBloom Logo" class="logo">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+            <button type="reset">Reset</button>
+        </div>
+    </div>
+    <div class="intro">
+        <h1>Welcome to TravelBloom</h1>
+        <p>Your gateway to exploring the world's most beautiful destinations.</p>
+    </div>
+    <div class="social-icons">
+        <a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a>
+        <a href="#"><img src="img/twitter-icon.png" alt="Twitter"></a>
+        <a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a>
+    </div>
+
+    <div id="recommendations-container">
+        <!-- Travel recommendations will be populated here -->
+    </div>
+
+    <script src="travel_recommendation.js"></script>
+</body>
+</html>
